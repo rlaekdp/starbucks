@@ -1,0 +1,435 @@
+@charset "UTF-8";
+/* starbuxks.css는 모든 디바이스 환경에서 공통적으로 읽히는 소스이다. */
+/* reset, common ======================= */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+}
+input[type="checkbox"]{
+    display: none;    
+}
+
+
+li{list-style: none;}
+
+em{
+    font-style: normal;
+    font-weight: bold;
+}
+img{
+    max-width: 100%
+}
+label, span{
+    display: inline-block;
+}
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;}
+
+    .container{
+        position: relative;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    /* header ========================================== */
+
+    header{
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        background: #007042;
+        z-index: 100;
+
+    }
+    header .title h1{
+        color: white;
+        text-align: center;
+        line-height: 70px;
+        font-size: 1.5em;
+    }
+
+    /* nav */
+    form{
+        position: relative;
+        padding: 20px;
+        border-bottom: 1px solid #3e3e3e;
+    }
+    form input{
+        width: 100%;
+        height: 30px; 
+        padding: 0 40px 0 10px;
+        box-sizing: border-box;
+        border: none;
+   }
+   form button{
+    position: absolute;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: #007042;
+    color: #fff;
+}
+
+    /* gnb */
+    /* 1depth */
+    .gnb>li{
+        position: relative;
+
+    }
+    .gnb>li>a{
+        position: relative;
+        display: block;
+        padding-left: 20px;
+        color: #eee;
+        line-height:60px ;
+
+    }
+    .gnb>li>a::after{
+        content: '\f078';
+        font-family: 'font Awesome 5 free';
+        font-weight: 900;
+        position: absolute;
+        right: 20px;
+
+    }
+    .gnb>li:hover>a{
+        background: #000;
+
+    }
+    .gnb>li:hover>a::after{
+        /* - 모양 */
+        content: '\f068';
+    }
+
+    /* 2depth */
+    .gnb ul{        
+        overflow: hidden;
+        height: 0;
+        transition: height 0.5s;
+    }
+    .gnb ul li a{
+        display: block;
+        height: 40px;
+        padding-left: 20px;
+        border-bottom: 1px solid transparent;
+        color: #aaa;
+        line-height: 40px;
+    }
+    .gnb ul li a:hover{
+        border-bottom-color:#fff ;
+    }
+    .gnb ul li a.sup{
+        line-height: 34px;
+    }
+    .gnb ul li a.sup sup{
+        font-size: 10px;
+    }
+    /* 현재 a하나당 41px높이 이므로 메뉴 개수만금 곱해주면 높이가 구해진다. */
+    .gnb>li:nth-child(1):hover ul{height: 123px;}
+    .gnb>li:nth-child(2):hover ul{height: 164px;}
+    .gnb>li:nth-child(3):hover ul{height: 123px;}
+    .gnb>li:nth-child(4):hover ul{height: 82px;}
+/* util */
+    .util li a{
+        display: block;
+        padding: 10px 20px;
+        color:#a5a5a5;
+        text-align: right;
+        font-size: 14px;}
+/* mamber */
+    [for="btn-member"]{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 25px;
+        /* 테두리만 있는 별 */
+        font-weight: 400;
+    }
+    #btn-member:checked + label{
+        /* 배경이 채워진별 */
+        font-weight: 900;
+    }
+    .member{
+        position: absolute;
+    top:70px;
+    width: 100%;
+    background: #111;
+    color:#fff;
+    height: 0;
+    /* 높이가 0일 때 안쪽 내용을 안보이게 처리 */
+    overflow: hidden;
+    transition: height 0.5s;
+    }
+    #btn-member:checked ~ .member{
+        height: 323px;
+    }
+    .member .wrap{
+        max-width: 350px;
+        margin: auto;
+        padding: 20px 0;
+    }
+    /* 회원가입/로그인 */
+    .member > div:nth-child(1) .wrap{
+        border-bottom: 1px solid #fff;
+    }
+    /* 스타벅스 카드 */
+    .member > div:nth-child(2) img{
+        padding-top: 30px;
+    }
+    /* 이미지를 감싸고있는 부모 */
+    .member .wrap > div:nth-child(1){
+        text-align: center;
+    }
+    .member .wrap img{
+        width: 85px;
+    }
+    .member .wrap .box{
+        padding: 0 10px;
+    }
+    .member .wrap .box p{
+        font-size: 12px;
+    }
+    .member .wrap .box p strong{
+        display: block;
+    }
+    .member .wrap .box .btn-group{
+        margin-top: 20px;
+    }
+    .member .wrap .box .btn-group button{
+        padding: 10px;
+        border: 1px solid #fff;
+        color: #fff;
+        transition: background-color 0.5s;
+    }
+    .member .wrap .box .btn-group button:hover{
+        background: #fff;
+        color: #000000;
+
+    }
+
+    /* sechtion ---------------------- */
+    section{
+        /* 현재 모바일에서 header가 fixed상태 이므로 section위에 올라갔다
+        따라서 header의 높이 만큼 section */
+        padding-top: 70px;
+    }
+
+    /* main-ad */
+    .main-ad{
+        overflow: hidden;
+        background: #ebebca;
+    }
+    .main-ad .emblem{
+        max-width: 300px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .main-ad .emblem a{
+        margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #a9b931;
+    border-radius: 5px;
+    color: #a9b931;
+    }
+    .main-ad .emblem a:hover{
+        background: #a9b931;
+        color: #fff;
+    }
+
+    .main-ad .flavor{
+        text-align: center;
+    }
+    .main-ad .flavor img:nth-child(1){
+        margin-left: -50px;
+    }
+    .main-ad .flavor img:nth-child(2){
+        padding: 20px;
+    }
+
+    /* product */
+.product{
+    background: url(../img/main2.jpg) no-repeat right bottom fixed ;
+    background-size: cover;
+}
+.product .product-info{
+
+    padding: 50px 0;
+}
+.product .product-info .wrap{
+    text-align: right;
+    margin-right:10px ;
+    color: #fff;
+}
+.text-box{color: #fff;}
+.product .product-info .wrap .text-box strong{
+    font-size: 24px;
+}
+.product .product-info .wrap .text-box strong span{
+    display: block;
+}
+.product .product-info .wrap .text-box p{
+    color: #aaa;
+    font-size: 12px;
+    line-height: 30px;
+}
+.product .product-info .wrap .text-box p em{
+    color: #fff;
+}
+.product .product-info .wrap .text-box a{
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+}
+.product .product-info .wrap .text-box a:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+.product .product-list{
+    padding: 50px 0;
+    background: rgba(255,255,255,0.2);
+} 
+.product .product-list h3{
+    padding-bottom:20px ;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    text-shadow: 0 0 4px #fff;
+}
+.product .product-list .wrap{
+    position: relative;
+    margin: 5px;
+    /* a가 부모영역을 벗어났을때 숨겨주기위해 */
+    overflow: hidden;
+} 
+.product .product-list .wrap img{
+    width: 100%;
+    display: block;
+}
+.product .product-list .wrap a{
+    position: absolute;
+    width: 100%;
+    /* 오른쪽 여백은 화살표랑 겹치지 않기위해서 더 확보하는 공간이 된다. */
+    padding: 10px 30px 10px 10px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    font: 12px;
+    bottom: -50px;
+    transition: bottom 0.5s;
+}
+.product .product-list .wrap:hover a{
+    bottom: 0;
+}
+.product .product-list .wrap a dl dt{}
+.product .product-list .wrap a dl dd{
+    /* 텍스트가 컨텐츠 영역을 벗어났을때 한줄로 생략표시해주는 공식
+    전제조건 : 컨텐츠의 영역이 제한되었을 떄 처리되는것임*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 화살표 */
+.product .product-list .wrap a::after{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '\f054';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+/* reserve */
+.reserve{
+    background: url(../img/main3.jpg)no-repeat center fixed;
+    background-size: cover;
+    padding: 50px 0;
+}
+.reserve h2{
+
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 4px #fff;
+}
+.reserve h2 sup{
+    font-size: 0.5em;
+}
+
+.reserve-info{
+
+    padding: 20px 0;
+}
+.reserve-info li .wrap{
+    margin: 20px;
+    text-align: center;
+}
+.reserve-info li .wrap span{
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.reserve-store .rotate{
+    width: 334px;
+    height: 334px;
+    margin: auto;
+}
+.reserve-store .rotate .front,
+.reserve-store .rotate .back{
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 0.5s;
+}
+
+.reserve-store .rotate .front{transform: rotateY(0);}
+.reserve-store .rotate .back{transform: scaleY(180deg);}
+.reserve-store .rotate:hover .front{transform: scaleY(180deg);}
+.reserve-store .rotate:hover .back{transform: scaleY(0deg);}
+.reserve-store .rotate .back a{
+
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border: 1px solid #a26e49;
+    border-radius: 5px;
+}
+.reserve-store .rotate .back a:hover{
+    background: #a26e49;
+    color: #fff;
+}
+footer{
+    padding: 20px 0;
+    background: #282828;
+    color: #fff;
+    font-size: 0.8em;
+    text-align: center;
+}
+footer .info{
+    padding: 20px 0;
+}

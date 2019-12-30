@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>스타벅스 코리아</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/grid.css">
+    <!-- 공통소스 -->
+    <link rel="stylesheet" href="css/starbucks.css">
+    <!-- 모바일 환경에서만 작동 -->
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:767px)">
+    <!-- tablit 이상 (pc도 포함)에서만 작동 -->
+    <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:768px)">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="title">
+                <h1>STABUCKS</h1>
+            </div>
+            <!-- 모바일에서보이는 메뉴버튼 -->
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <b class="blind">메뉴</b>
+            </label>
+
+            <nav>
+                <form action="#">
+                    <label for="search" class="blind">통합검색</label>
+                    <input type="text" id="search">
+                    <button class="fas fa-search"><span class="blind">검색</span></button>
+                </form>
+
+                <ul class="gnb">
+                    <li>
+                        <a href="#">COFFEE</a>
+                        <ul>
+                            <li><a href="#">커피</a></li>
+                            <li><a href="#">나와어울리는 커피</a></li>
+                            <li><a href="#" class="sup">스타벅스 리저브 <sup>TM</sup></a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">MENU</a>
+                        <ul>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">삼품</a></li>
+                            <li><a href="#">카드</a></li>
+                            
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">STORE</a>
+                        <ul>
+                        
+                            <li><a href="#">매장찾기</a></li>
+                            <li><a href="#">드라이브 드루 매장</a></li>
+                            <li><a href="#" clsaa="sup">스타벅스 리저브<sup>TM</sup></a></li>
+                            
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">RISPONSIBILITY</a>
+                        <ul>
+                            <li><a href="#">사회공헌 캠페인 공개</a></li>
+                            <li><a href="#">지역사화 참여활동</a></li>
+                        </ul>
+                    </li>                        
+                </ul>
+                <ul class="util">
+                    <li><a href="#">sing in</a></li>
+                    <li><a href="#">my starbucks</a></li>
+                    <li><a href="#">Sudtommer Sevice</a></li>
+                    <li><a href="#">Find a store</a></li>
+                </ul>
+            </nav>
+            <!-- 멤버쉽 별모양버튼 -->
+             <!-- 멤버쉽(별모양버튼) -->
+             <input type="checkbox" id="btn-member">
+             <label for="btn-member" class="fas fa-star">
+                 <span class="blind">멤버쉽</span>
+             </label>
+             <!-- 멤버쉽버튼 누르면 나오는 레이아웃 -->
+             <div class="member row">
+                 <!-- 회원가입/로그인 -->
+                 <div class="col-sm-6">
+                     <div class="wrap row">
+                         <div class="col-sm-3 col-xs-3">
+                             <img src="img/login.png" alt="">
+                         </div>
+                         <div class="col-sm-9 col-xs-9">
+                             <div class="box">
+                                 <p>
+                                     <strong>스타벅스 코리아 회원이 아니세요?</strong>
+                                     스타벅스 커피 코리아 회원만의 특별한 혜택을 누릴 수 있습니다.
+                                 </p>
+                                 <div class="btn-group">
+                                     <button>로그인</button>
+                                     <button>회원가입</button>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <!-- 스타벅스카드 -->
+                 <div class="col-sm-6">
+                     <div class="wrap row">
+                         <div class="col-sm-3 col-xs-3">
+                             <img src="img/card.png" alt="">
+                         </div>
+                         <div class="col-sm-9 col-xs-9">
+                             <div class="box">
+                                 <p>
+                                     <strong>스타벅스카드를 가지고 계신가요?</strong>
+                                     스타벅스카드를 등록하시면, 마이스타벅스 리워드만의 특별한 혜택을
+                                     누릴 수 있습니다. 
+                                 </p>
+                                 <div class="btn-group">
+                                     <button>카드등록</button>                                
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>                
+             </div>
+         </div>
+     </header>
+ 
+     <section>
+         <article class="main-ad">
+             <h2 class="blind">신제품 광고</h2>
+             <div class="container">
+                 <div class="emblem">
+                     <img src="img/emblem.png" alt="show your flavor">
+                     <a href="#">자세히보기</a>
+                 </div>
+                 <div class="flavor">
+                     <img src="img/bev1_cup.png" alt="">
+                     <img src="img/bev1_txt.png" alt="choux cream strawberry frappccino">
+                 </div>
+             </div>
+         </article>
+         <article class="product">
+             <h2 class="blind">제품소개</h2>
+             <div class="product-info container">
+                 <h3 class="blind">제품정보</h3>
+                 <div class="row">
+                     <div class="col-sm-6">
+                         <div class="wrap">
+                             <img src="img/fav_prod_txt01.png" alt="pick your favorite">
+                             <div class="text-box">
+                                 <strong>
+                                     <span>다양한 메뉴를</span> 스타벅스에서 즐겨보세요.
+                                 </strong>
+                                 <p>스타벅스만의 특별함을 경험할 수 있는 <em>최상의 선택음료</em></p>
+                                 <p>스타벅스 커피와 완벽한 어울림을 <em>자랑하는 푸드</em></p>
+                                 <p>다양한 시도와 디자인으로 <em>가치를 더하는 상품</em></p>
+                                 <p>소중한 사람에게 마음을 전하는 가장 좋은 방법 <em>스타벅스 카드</em></p>
+                                 <a href="#">자세히보기</a>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-sm-6 bg"></div>
+                 </div>
+             </div>
+             <div class="product-list">
+                 <h3>새로나온 제품</h3>
+                 <div class="container">
+                     <ul class="row">
+                         <li class="col-sm-3 col-xs-6">
+                             <div class="wrap">
+                                 <img src="img/coffee1.jpg" alt="">
+                                 <a href="#">
+                                     <dl>
+                                         <dt>나이트 콜드브루 나이트 콜드브루 나이트 콜드브루</dt>
+                                         <dd>Nitro cold Brew Nitro cold Brew Nitro cold Brew</dd>
+                                     </dl>
+                                 </a>
+                             </div>
+                         </li>
+                         <li class="col-sm-3 col-xs-6">
+                             <div class="wrap">
+                                 <img src="img/coffee2.jpg" alt="">
+                                 <a href="#">
+                                     <dl>
+                                         <dt>나이트 콜드브루</dt>
+                                         <dd>Nitro cold Brew</dd>
+                                     </dl>
+                                 </a>
+                             </div>
+                         </li>
+                         <li class="col-sm-3 col-xs-6">
+                             <div class="wrap">
+                                 <img src="img/coffee3.jpg" alt="">
+                                 <a href="#">
+                                     <dl>
+                                         <dt>나이트 콜드브루</dt>
+                                         <dd>Nitro cold Brew</dd>
+                                     </dl>
+                                 </a>
+                             </div>
+                         </li>
+                         <li class="col-sm-3 col-xs-6">
+                             <div class="wrap">
+                                 <img src="img/coffee4.jpg" alt="">
+                                 <a href="#">
+                                     <dl>
+                                         <dt>나이트 콜드브루</dt>
+                                         <dd>Nitro cold Brew</dd>
+                                     </dl>
+                                 </a>
+                             </div>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+         </article>
+         <article class="reserve">
+             <h2>스타벅스 리저브<sup>TM</sup></h2>            
+             <div class="reserve-info container">
+                 <ul class="row">
+                     <li class="col-xs-6 col-sm-3">
+                         <div class="wrap">
+                             <img src="img/icon_reserve_info1.png" alt="">
+                             <span>clover</span>
+                         </div>
+                     </li>
+                     <li class="col-xs-6 col-sm-3">
+                         <div class="wrap">
+                             <img src="img/icon_reserve_info2.png" alt="">
+                             <span>black eagle</span>
+                         </div>
+                     </li>
+                     <li class="col-xs-6 col-sm-3">
+                         <div class="wrap">
+                             <img src="img/icon_reserve_info3.png" alt="">
+                             <span>siphon</span>
+                         </div>
+                     </li>
+                     <li class="col-xs-6 col-sm-3">
+                         <div class="wrap">
+                             <img src="img/icon_reserve_info4.png" alt="">
+                             <span>poc</span>
+                         </div>
+                     </li>
+                 </ul>
+             </div>
+ 
+             <!-- 리저브 매장(뒤집기 기능) -->
+             <div class="reserve-store">
+                 <div class="rotate">
+                     <img src="img/reserve_medal01.png" alt="reserve" class="front">
+                     <div class="back">
+                         <img src="img/reserve_medal02.png" alt="스타벅스 리저브 매장,
+                         스타벅스 리저브 TM커피 및 관련제품을 판매하는 매장을 확인하려면
+                         매장보기를 눌러주세요">
+                         <a href="#">매장보기</a>
+                     </div>
+                 </div>
+             </div>
+         </article>
+     </section>
+     <footer>
+        <div class="banner">
+            <div class="wrap">
+                <input type="checkbox" id="btn-banner">
+                <label for="btn-banner" class="fa">
+                    <span class="blind">재생/정지</span>
+                </label>
+                <ul>
+                    <li class="col-sm-4"><img src="img/banner1.jpg" alt=""></li>
+                    <li class="col-sm-4"><img src="img/banner2.jpg" alt=""></li>
+                    <li class="col-sm-4"><img src="img/banner3.jpg" alt=""></li>
+                    <li class="col-sm-4"><img src="img/banner4.jpg" alt=""></li>
+                    <li class="col-sm-4"><img src="img/banner5.jpg" alt=""></li>
+                    <li class="col-sm-4"><img src="img/banner6.jpg" alt=""></li>
+                    <!-- 1,2 배너 복사본 준비 -->
+                    <li><img src="img/banner1.jpg" alt=""></li>
+                    <li><img src="img/banner2.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="info">
+            <li>사업자등록번호 : 201-81-21515</li>
+            <li>(주)스타벅스커피 코리아 대표이사 : 송 데이비드 호섭</li>
+            <li>TEL : 02) 3015-1100</li>
+            <li>개인정보 책임자 : 양종환</li>
+        </ul>
+        <small>ⓒ 2019 Starbucks Coffee Company. All Rights Reserved.</small>
+        
+
+backgra
+
+    </footer>
+ </body>
+ </html>
+ 
